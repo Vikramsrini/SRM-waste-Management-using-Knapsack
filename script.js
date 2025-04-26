@@ -131,7 +131,8 @@ function displayResults(data) {
         .bindPopup(`
             <b>${item.block}</b><br>
             Type: ${item.type}<br>
-            Weight: ${item.collected || item.weight} kg<br>
+            Total Weight: ${item.weight} kg<br>
+            Collected Weight: ${item.collected_weight || item.weight} kg<br>
             Value: $${item.value}
         `);
     });
@@ -148,22 +149,25 @@ function displayResults(data) {
     
     // Populate waste table
     let totalWeight = 0;
+    let totalCollectedWeight = 0;
     data.collected_waste.forEach(item => {
-        const weight = item.collected || item.weight;
-        totalWeight += weight;
+        const collected = item.collected_weight || item.weight; // Use collected_weight for divisible items
+        totalWeight += item.weight;
+        totalCollectedWeight += collected;
         
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${item.block}</td>
             <td>${item.type}</td>
-            <td>${weight} kg</td>
+            <td>${item.weight} kg</td>
+            <td>${collected} kg</td>
             <td>$${item.value}</td>
         `;
         wasteTableBody.appendChild(row);
     });
     
     // Display totals
-    totalWeightSpan.textContent = `${totalWeight} kg`;
+    totalWeightSpan.textContent = `${totalCollectedWeight} kg`;
     totalValueSpan.textContent = `$${data.total_value}`;
 }
 
