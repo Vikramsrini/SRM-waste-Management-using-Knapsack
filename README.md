@@ -1,6 +1,5 @@
 # SRM University Waste Management Optimizer
 
-![Project Banner](https://i.imgur.com/JfQ8bRk.png)
 
 An intelligent waste collection system that optimizes routes and load distribution using knapsack algorithms for SRM University Kattankulathur campus.
 
