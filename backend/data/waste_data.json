@@ -1,0 +1,23 @@
+[
+    {
+      "block": "Medical Block",
+      "type": "Bio-Waste",
+      "weight": 120,
+      "value": 300,
+      "divisible": false
+    },
+    {
+      "block": "Tech Park",
+      "type": "E-Waste",
+      "weight": 80,
+      "value": 400,
+      "divisible": false
+    },
+    {
+      "block": "Library",
+      "type": "Paper",
+      "weight": 200,
+      "value": 180,
+      "divisible": true
+    }
+  ]
