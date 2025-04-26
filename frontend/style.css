@@ -133,12 +133,6 @@ button:hover {
     animation: fadeIn 1s ease-in-out;
 }
 
-@media (max-width: 900px) {
-    .dashboard {
-        grid-template-columns: 1fr;
-    }
-}
-
 .card {
     background: var(--white);
     backdrop-filter: blur(10px); /* Blur effect */
@@ -291,12 +285,56 @@ tr:hover {
     100% { transform: translateY(0); opacity: 1; }
 }
 
-/* Leaflet customizations */
-.leaflet-popup-content {
-    font-family: 'Poppins', sans-serif;
-    margin: 8px 12px;
+/* Responsive Design */
+@media (max-width: 900px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #map {
+        height: 300px;
+    }
 }
 
-.leaflet-popup-content b {
-    color: var(--srm-green);
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    .input-group input {
+        width: 100%;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
 }
