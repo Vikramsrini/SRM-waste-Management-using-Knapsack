@@ -77,7 +77,7 @@ async function optimizeCollection() {
     optimizeBtn.disabled = true;
     
     try {
-        const response = await fetch('http://localhost:5000/optimize', {
+        const response = await fetch('http://192.168.1.14:5000/optimize', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
