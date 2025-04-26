@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRM Waste Optimizer</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="./assets/srm-university-seeklogo.png" alt="SRM Logo" class="logo">
+            <h1>SRM Waste Collection Optimizer</h1>
+            <p>Kattankulathur Campus</p>
+        </header>
+
+        <div class="control-panel">
+            <div class="input-group">
+                <label for="capacity">Truck Capacity (kg):</label>
+                <input type="number" id="capacity" value="300" min="100" max="1000">
+                <button id="optimize-btn">Optimize Collection</button>
+            </div>
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Calculating optimal route...</p>
+            </div>
+            <div id="error" class="hidden"></div>
+        </div>
+
+        <div class="dashboard">
+            <div class="map-panel">
+                <h2><img src="https://cdn-icons-png.flaticon.com/512/447/447031.png" class="icon"> Campus Route Map</h2>
+                <div id="map"></div>
+                <div id="route-info"></div>
+            </div>
+
+            <div class="results-panel">
+                <h2><img src="https://cdn-icons-png.flaticon.com/512/3483/3483628.png" class="icon"> Collection Results</h2>
+                <div class="results-table-container">
+                    <table id="waste-table">
+                        <thead>
+                            <tr>
+                                <th>Building</th>
+                                <th>Waste Type</th>
+                                <th>Weight</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div id="summary">
+                    <div class="summary-item">
+                        <span>Total Collected:</span>
+                        <span id="total-weight">0 kg</span>
+                    </div>
+                    <div class="summary-item highlight">
+                        <span>Total Value:</span>
+                        <span id="total-value">$0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
