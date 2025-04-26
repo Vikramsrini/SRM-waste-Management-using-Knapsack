@@ -1,27 +1,41 @@
-# SRM Waste Optimization Project
+# SRM University Waste Management Optimizer
 
-A web-based application to optimize waste collection and routing for SRM University's Kattankulathur campus. The project uses a hybrid knapsack algorithm to maximize the value of collected waste and a Traveling Salesman Problem (TSP) solver to determine the optimal route for waste collection.
+![Project Banner](https://i.imgur.com/JfQ8bRk.png)
 
----
+An intelligent waste collection system that optimizes routes and load distribution using knapsack algorithms for SRM University Kattankulathur campus.
 
-## Features
-- **Hybrid Knapsack Algorithm**: Handles both divisible and indivisible waste items to maximize the value of collected waste.
-- **Route Optimization**: Uses the Traveling Salesman Problem (TSP) to determine the most efficient route for waste collection.
-- **Modern UI**: A responsive and visually appealing frontend built with HTML, CSS, and JavaScript.
-- **Dynamic Data**: Reads waste and distance data from JSON files for easy updates.
+## 🚀 Features
 
----
+- **Campus-Specific Optimization**
+  - Real coordinates of SRM KTR buildings
+  - Accurate distance matrix between locations
+  - Custom map markers for different waste types
 
-## Technologies Used
-- **Backend**: Python (Flask)
-- **Frontend**: HTML, CSS, JavaScript
-- **Algorithms**: Knapsack Problem, Traveling Salesman Problem (TSP)
-- **Libraries**:
-  - Flask (Backend API)
-  - NetworkX (TSP Solver)
-  - Leaflet.js (Interactive Maps)
-  - Material Design (Frontend Styling)
+- **Advanced Algorithms**
+  - Fractional Knapsack for divisible waste
+  - 0/1 Knapsack for indivisible waste
+  - Traveling Salesman Problem (TSP) for route optimization
 
----
+- **Interactive Dashboard**
+  - Leaflet.js map with Google Satellite layer
+  - Real-time collection planning
+  - Visual representation of optimal routes
 
-## Folder Structure
+## 🛠️ Tech Stack
+
+**Frontend:**
+- Pure HTML/CSS/JavaScript
+- Leaflet.js for interactive maps
+- Google Maps satellite tiles
+
+**Backend:**
+- Python Flask
+- NetworkX for graph algorithms
+- JSON data storage
+
+## 📦 Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/Vikramsrini/srm-waste-optimizer.git
+cd srm-waste-optimizer
