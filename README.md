@@ -115,21 +115,10 @@ frontend/
 
 ---
 
-## License
 
-MIT License
-
----
 
 ## Authors
 
 - [Vikram S] – [vikramsrinivas150@gmail.com]
 
----
 
-## Acknowledgements
-
-- SRM University Kattankulathur
-- [Flask](https://flask.palletsprojects.com/)
-- [NetworkX](https://networkx.org/)
-- [Google Maps API](https://developers.google.com/maps)
