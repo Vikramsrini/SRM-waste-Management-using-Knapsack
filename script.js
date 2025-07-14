@@ -59,7 +59,7 @@ async function optimizeCollection() {
     optimizeBtn.disabled = true;
 
     try {
-        const response = await fetch('https://999f24ffb82b.ngrok-free.app//optimize', {
+        const response = await fetch('https://999f24ffb82b.ngrok-free.app/optimize', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
