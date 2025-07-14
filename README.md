@@ -109,13 +109,6 @@ frontend/
 
 ---
 
-## Screenshots
-
-![Dashboard Screenshot](frontend/assets/srm-university-seeklogo.png)
-
----
-
-
 
 ## Authors
 
